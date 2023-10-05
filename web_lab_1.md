@@ -1,30 +1,45 @@
-
-
-
-### Session Dependancies 
-
 ## Task 0: Getting Started
 
-1. As always, start  and connect to your Azure Labs' virtual machine  (VM) by visiting this link: https://labs.azure.com/virtualmachines.
-1. Connect to the VM: 
-     1. Toggle the button to start – it might take a while.
-     2. Once it changes to Running, click on the monitor icon.
-     3. A file will be downloaded – click on it to run it, and you will be prompted to enter the password you created last time. IMPORTANT: the username must be `labuser` (remove the ~/).
-     4. Remember to click on the following icon to make the window resize appropriately <img  src="./assets/resize_icon.png"/> 
+1. As always, start and connect to your Azure Labs' virtual machine (VM) by visiting this link: [https://labs.azure.com/virtualmachines](https://labs.azure.com/virtualmachines).
+1. Connect to the VM:
+   1. Toggle the button to start – it might take a while.
+   2. Once it changes to Running, click on the monitor icon.
+   3. A file will be downloaded – click on it to run it, and you will be prompted to enter the password you created last time. IMPORTANT: the username must be `labuser` (remove the ~/).
+   4. Remember to click on the following icon to make the window resize appropriately <img  src="./assets/resize_icon.png"/>
 
-### Task 0.1: Setting an Environment Variable 
+### Task 0.1: Leveling up our Development Environment
 
-Since, for this part of the module, we are going to start to develop more substantial programs, we need to level up our development environment.
+**setting the Node.js Environment Variable**
 
+For this part of the module we'll develop slightly larger programs. As such, we need to level up our VMs development environment.
 
+First, we will set up an environment variable to run `Node.js` from any terminal location. We are only doing this because we are using the Laragon Node.js package. [If you install node through the official way, the environment variable should set for you automatically](https://nodejs.org/en/download).
+
+1. In the Window's search bar of your, search for and then select: System (Control Panel)
+
+![](assets/web_lab_1/1.Explorer.png)
+
+2. When the control panel is open stat typing "environment" into the search box at the top of the window, and click "Edit the system environment variables".
+
+![](assets/web_lab_1/2.access_environment_variables.png)
+
+3. Click on the `Environment Variables button located the system properties window.
+
+![](assets/web_lab_1/3.edit_enviroment_variable.png)
+
+4. In the "Environment Variables Window": select "Path" the click "Edit".
+
+![](assets/web_lab_1/4.add_environment_variable.png)
+
+5. In the "Edit environment variable window": click edit and add the following the value `C:\laragon\bin\nodejs\node-v18`. When updated, you can click ok.
 
 ## Task 1
 
 - Let's make our first Node web application.
-- Create a folder in your `code` directory.  
+- Create a folder in your `code` directory.
 - Within your lab_8 folder create the file `sample_1.js`.
 - Type in the code below (see, `A simple NodeJS Application`)
-- Run you application by pointing your IDEs  terminal to your lab_8 folder and input the command `node sample_1.js`.
+- Run you application by pointing your IDEs terminal to your lab_8 folder and input the command `node sample_1.js`.
 - Now visit your browser, and navigate to `http://localhost:8000` see what happens! You should see "hello world". Next, take a look at your terminal, this is where your `console.log()` statements will be be output.
 
 \newpage
@@ -46,12 +61,11 @@ server.on("request", (req, res) => {
 server.listen(8080);
 ```
 
->> A simple NodeJS Application
-
+> > A simple NodeJS Application
 
 Do not worry if the code above seems somewhat alien to you; much of it may be new. In short, we are setting up web server that is listening on local host port 8080. When a client connects, we simply return hello world.
 
-To achieve this, we first must pull in Node’s http module (l.1). Next, we create a new server instance (line 2). 
+To achieve this, we first must pull in Node’s http module (l.1). Next, we create a new server instance (line 2).
 
 Then we set up an HTTP request handler (l.4). When an HTTP request is received the function, which is the second argument passed into server.on(), is fired. Two objects are passed into this handler function (res, req). As you can see we can use these objects to inspect the type of request (l.7 - 8) and write a response to the client (l.11).
 
@@ -61,16 +75,15 @@ We can now stop our application from running. To do this, navigate to the termin
 
 Take a deep breath, and pat yourself on the back - you've just made your first NodeJS application!
 
-## Task Two 
+## Task Two
 
 Let's do something a little more interesting, and see if we can use Node.js to create construct a simple web application!
 
-Above,we used Node's inbuilt HTTP module to create a basic web server and respond to HTTP requests. 
+Above,we used Node's inbuilt HTTP module to create a basic web server and respond to HTTP requests.
 
 In this task, we will look to simplify managing HTTP requests using, the node package, express.
 
 According to the the [express documentation](http://expressjs.com/), "express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications". In other words, it provides a lightweight framework to assist in the development of web applications.
-
 
 ### An example using express
 
@@ -90,7 +103,7 @@ app.listen(port, () => {
 
 The above example uses the express package to create a new web-server that listens on port 3000 (l.9). We can then set up listeners to respond to any given HTTP request. Above, we listen for a get request to the base URL of our server (l.5).
 
-### Steps 
+### Steps
 
 - Create a new folder called `week_2`
 - Open VSCode pointing to the location of your `week_2` folder
