@@ -12,3 +12,6 @@ My requirements are as follows:
 - [ ] There should be a GitHub action to compile the notes into all of the respective formats. 
 - [ ] **Optional:** They should be structured as standalone documentation. 
 
+### General Notes 
+
+**Currently,** I am experimenting with the following template: `https://github.com/Wandmalfarbe/pandoc-latex-template/blob/master/README.md`

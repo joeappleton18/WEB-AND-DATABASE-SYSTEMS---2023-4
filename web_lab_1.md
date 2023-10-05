@@ -14,8 +14,7 @@
 
 ### Task 0.1: Setting an Environment Variable 
 
-Since, for this part of the module, we are going to start to develop more substantial programs, we need to level up our development environment. 
-
+Since, for this part of the module, we are going to start to develop more substantial programs, we need to level up our development environment.
 
 
 
@@ -27,6 +26,8 @@ Since, for this part of the module, we are going to start to develop more substa
 - Type in the code below (see, `A simple NodeJS Application`)
 - Run you application by pointing your IDEs  terminal to your lab_8 folder and input the command `node sample_1.js`.
 - Now visit your browser, and navigate to `http://localhost:8000` see what happens! You should see "hello world". Next, take a look at your terminal, this is where your `console.log()` statements will be be output.
+
+\newpage
 
 ```js
 const http = require("http");
